@@ -3,15 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
@@ -20,8 +13,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* section-separator.css */
+.gradient-line {
+  height: 1px; /* Adjust height to fit the line's thickness */
+  border: none; /* Remove default border styles */
+  background: linear-gradient(to right, #ff7e5f, #feb47b, #00c6ff, #00b09b, #ff7e5f); /* Added green color */
+  animation: gradientAnimation 3s linear infinite;
+  width: 60vw;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
   }
 }
