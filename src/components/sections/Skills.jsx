@@ -1,4 +1,4 @@
-import { skills } from "./skills";
+import { skills } from "./skills_data";
 const Skills = () => {
   return (
     <section className="h-screen flex flex-col items-center justify-center gap-14">

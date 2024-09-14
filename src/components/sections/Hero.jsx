@@ -4,7 +4,7 @@ import { BackgroundLines } from "../ui/background-lines";
 const Hero = () => {
   return (
     <BackgroundLines className="flex w-full flex-col px-4 md:pt-20 pt-10 h-screen">
-      <div className="flex justify-center gap-14 flex-col md:flex-row">
+      <div className="flex justify-center gap-11 flex-col md:flex-row">
         <div className="md:w-full flex  items-center justify-center">
           <Image
             src={"/images/developer.webp"}

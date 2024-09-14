@@ -2,6 +2,7 @@ import Hero from "@/components/sections/Hero";
 import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import SectionSeparator from "@/components/ui/section-separator";
+import Testimonials from "@/components/sections/Testimonials";
 
 const Home = () => {
   return (
@@ -11,6 +12,8 @@ const Home = () => {
       <Skills />
       <SectionSeparator />
       <Projects />
+      <SectionSeparator />
+      <Testimonials />
       <SectionSeparator />
     </main>
   );

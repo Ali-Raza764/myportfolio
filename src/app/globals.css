@@ -30,3 +30,29 @@ body {
     background-position: 100% 0%;
   }
 }
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tech-slideshow {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.tech-slideshow .animate-slide {
+  display: flex;
+  animation: slide 10s linear infinite;
+}
+
+.tech-slideshow .testimonial-card {
+  flex: 0 0 auto;
+  margin: 0 1rem;
+}
+
