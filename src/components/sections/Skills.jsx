@@ -1,7 +1,7 @@
 import { skills } from "./skills_data";
 const Skills = () => {
   return (
-    <section className="h-screen flex flex-col items-center justify-center gap-14">
+    <section className="h-screen flex flex-col items-center justify-center gap-14" id="skills">
       <div >
         <h2 className="text-4xl font-sans font-semibold w-full text-center">
           Skills
