@@ -76,6 +76,7 @@ const Projects = () => {
               technologiesUsed={project.technologiesUsed}
               description={project.description}
               liveUrl={project.liveUrl}
+              key={project.name}
             />
           );
         })}
@@ -94,7 +95,7 @@ const ProjectItem = ({
   liveUrl,
 }) => {
   return (
-    <div className="project-item w-[20rem] h-[25rem] border border-gray-600 rounded-md p-4 flex flex-col items-center justify-center bg-gray-800 hover:bg-gray-700 transition-colors duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-white gap-4">
+    <div className="project-item w-[20rem] h-[25rem] rounded-md p-4 flex flex-col items-center justify-center bg-slate-900/40 hover:bg-slate-900/90 transition-colors duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-white gap-4">
       <Image 
         src={"https://dummyimage.com/400X200"} 
         width={200} 

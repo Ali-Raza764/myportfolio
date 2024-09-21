@@ -3,7 +3,7 @@ import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import SectionSeparator from "@/components/ui/section-separator";
 import Testimonials from "@/components/sections/Testimonials";
-import Blogs from "../components/sections/Blogs";
+import Blogs from "@/components/sections/Blogs";
 import Contact from "@/components/sections/Contact";
 
 const Home = () => {
