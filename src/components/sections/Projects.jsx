@@ -1,4 +1,4 @@
-import { PinContainer } from "../ui/3d-pin";
+import Image from "next/image";
 
 const Projects = () => {
   const projects = [
@@ -70,17 +70,13 @@ const Projects = () => {
       <div className="h-full w-full relative flex flex-wrap gap-x-4 justify-center items-center md:p-6 gap-y-24 md:mb-6">
         {projects.map((project) => {
           return (
-            <PinContainer title={project.name} href={project.liveUrl} key={project.name}>
-              <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 sm:w-[20rem] sm:h-[20rem] w-[17rem] h-[17rem]">
-                <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                  {project.name}
-                </h3>
-                <div className="text-base !m-0 !p-0 font-normal">
-                  <span className="text-slate-500 text-ellipsis line-clamp-4">{project.description}</span>
-                </div>
-                <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
-              </div>
-            </PinContainer>
+            <ProjectItem
+              name={project.name}
+              repoUrl={project.repoUrl}
+              technologiesUsed={project.technologiesUsed}
+              description={project.description}
+              liveUrl={project.liveUrl}
+            />
           );
         })}
       </div>
@@ -89,3 +85,45 @@ const Projects = () => {
 };
 
 export default Projects;
+
+const ProjectItem = ({
+  name,
+  repoUrl,
+  technologiesUsed,
+  description,
+  liveUrl,
+}) => {
+  return (
+    <div className="project-item w-[20rem] h-[25rem] border border-gray-600 rounded-md p-4 flex flex-col items-center justify-center bg-gray-800 hover:bg-gray-700 transition-colors duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-white gap-4">
+      <Image 
+        src={"https://dummyimage.com/400X200"} 
+        width={200} 
+        height={200} 
+        className="w-full rounded-md"
+        alt={name} 
+      />
+      <h3 className="text-2xl font-semibold mb-2 text-center">{name}</h3>
+      <p className="text-sm text-gray-400 mb-4 text-center line-clamp-3 text-ellipsis">{description}</p>
+      <div className="mt-auto">
+        <a
+          href={repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-indigo-400 hover:underline"
+        >
+          View Repo
+        </a>
+        {liveUrl && (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 text-green-400 hover:underline"
+          >
+            Live Preview
+          </a>
+        )}
+      </div>
+    </div>
+  );
+};
