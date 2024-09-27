@@ -32,7 +32,7 @@ const MobileNavBar = () => {
         <nav className="h-full flex items-center justify-center flex-col gap-4 mt-6">
           {navItems.map((link) => (
             <Link
-              key={link.href}
+              key={link.name}
               href={link.link}
               className={`pb-1 border-b  transition hover:border-gray-400 ${
                 pathname === link.href

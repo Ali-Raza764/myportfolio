@@ -15,15 +15,12 @@ const Contact = () => {
         </p>
       </div>
       <div className="flex items-center justify-between flex-col md:flex-row md:px-14 w-full">
-        <div className="form md:h-[25rem] md:w-1/2 w-full">
-          <form
-            action=""
-            className="h-full w-full flex flex-col gap-4 rounded-xl shadow-gray-400 shadow-sm p-4 items-center justify-center"
-          >
+        <div className="form md:h-[25rem] md:w-1/2 w-full border rounded-md border-white/[0.2]">
+          <form className="h-full w-full flex flex-col gap-4 rounded-xl  p-4 items-center justify-center">
             <div className="flex flex-col w-[80%]">
               <label
                 htmlFor="senderemail"
-                className="font-semibold font-sans text-lg text-white"
+                className="font-semibold font-sans text-lg text-white mb-1"
               >
                 Email
               </label>
@@ -31,22 +28,24 @@ const Contact = () => {
                 type="email"
                 name="senderemail"
                 id="senderemail"
-                className="outline-none bg-neutral-500 p-2 rounded-md text-white font-sans font-semibold text-md"
+                placeholder="Enter Your Email Here"
+                className="outline-none bg-white/[0.2] p-2 rounded-md text-white font-sans font-semibold text-md"
                 required
               />
             </div>
             <div className="flex flex-col w-[80%]">
               <label
                 htmlFor="message"
-                className="font-semibold font-sans text-lg text-white"
+                className="font-semibold font-sans text-lg text-white mb-1"
               >
                 Type Your Message
               </label>
               <textarea
                 name="message"
                 id="message"
-                className="outline-none bg-neutral-500 p-2 rounded-md text-white font-sans font-semibold text-md"
+                className="outline-none bg-white/[0.2] p-2 rounded-md text-white font-sans font-semibold text-md"
                 required
+                placeholder="Type Your Message Here"
               ></textarea>
             </div>
             <button
@@ -60,10 +59,12 @@ const Contact = () => {
 
         {/* Links Section */}
         <div className="globe h-full w-full md:w-1/2 p-4 flex flex-col items-center justify-center">
-          <h3 className="text-white text-xl font-semibold mb-4">Connect with me</h3>
+          <h3 className="text-white text-xl font-semibold mb-4">
+            Connect with me
+          </h3>
           <div className="flex flex-col gap-4">
             <a
-              href="mailto:youremail@example.com"
+              href="mailto:alikillerno@gmail.com"
               className="flex items-center gap-2 text-white hover:text-gray-400 transition duration-300"
             >
               <FaEnvelope className="text-2xl" />

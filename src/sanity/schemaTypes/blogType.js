@@ -1,9 +1,9 @@
 import {DocumentTextIcon} from '@sanity/icons'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
-export const postType = defineType({
-  name: 'post',
-  title: 'Post',
+export const blogType = defineType({
+  name: 'blog',
+  title: 'Blog',
   type: 'document',
   icon: DocumentTextIcon,
   fields: [
@@ -45,6 +45,10 @@ export const postType = defineType({
     defineField({
       name: 'publishedAt',
       type: 'datetime',
+    }),
+    defineField({
+      name: 'excerpt',
+      type: 'string',
     }),
     defineField({
       name: 'body',
