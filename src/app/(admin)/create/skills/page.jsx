@@ -1,9 +1,7 @@
-import React from 'react'
+import Skills from "./Skills";
 
-const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+const CreateSkillsPage = () => {
+  return <Skills />;
+};
 
-export default page
+export default CreateSkillsPage;
