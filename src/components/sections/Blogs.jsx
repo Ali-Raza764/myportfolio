@@ -3,7 +3,7 @@ import BentoGridDemo from "./ItemsGrid";
 import { fetchData } from "@/lib/fetchData";
 
 const Blogs = async () => {
-  const blogs = await fetchData("blog");
+  const blogs = await fetchData("blog", 6);
 
   return (
     <section

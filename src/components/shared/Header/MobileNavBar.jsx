@@ -10,7 +10,6 @@ const MobileNavBar = () => {
   const pathname = usePathname();
 
   const handleClick = () => {
-    console.log("clicked");
     setActive(!active);
   };
 

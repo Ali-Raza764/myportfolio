@@ -9,8 +9,6 @@ function BentoGridDemo({ blogs }) {
     return;
   }
 
-  console.log(blogs[0]._id);
-
   return (
     <BentoGrid className="max-w-4xl mx-auto">
       {blogs.map((blog, i) => (
