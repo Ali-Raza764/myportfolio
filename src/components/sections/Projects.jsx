@@ -1,6 +1,7 @@
 import { fetchData } from "@/lib/fetchData";
 import { urlFor } from "@/lib/getImageUrl";
 import Image from "next/image";
+import Link from "next/link";
 
 const Projects = async () => {
   const projects = await fetchData("project", 6);
@@ -11,14 +12,16 @@ const Projects = async () => {
       id="projects"
     >
       <div>
-        <h2 className="text-4xl font-sans font-semibold w-full text-center">
-          Projects
-        </h2>
+        <div className="flex items-center gap-8">
+          <h2 className="text-4xl font-sans font-semibold w-full text-center">
+            Projects
+          </h2>
+        </div>
         <p className="w-full text-center font-sans text-gray-400 mt-2">
           Projects That I a have built
         </p>
       </div>
-      <div className="h-full w-full relative flex flex-wrap gap-x-4 justify-center items-center md:p-6 gap-y-24 md:mb-6">
+      <div className="h-full w-full relative flex flex-wrap gap-x-4 justify-center items-center md:p-6 gap-y-24 ">
         {projects.map((project) => {
           return (
             <ProjectItem
@@ -36,13 +39,19 @@ const Projects = async () => {
           );
         })}
       </div>
+      <Link
+        href="/projects"
+        className="md:mb-6 border border-gray-400 rounded-md p-2 hover:border-black transition"
+      >
+        All Projects
+      </Link>
     </section>
   );
 };
 
 export default Projects;
 
-const ProjectItem = ({
+export const ProjectItem = ({
   name,
   repoUrl,
   technologiesUsed,
@@ -54,9 +63,10 @@ const ProjectItem = ({
     <div className="project-item w-[20rem] h-[25rem] p-4 flex flex-col items-center justify-center bg-black transition duration-300 transform hover:scale-105 text-white gap-4 rounded-xl hover:shadow-xl shadow-input shadow-none border-white/[0.2] border">
       <Image
         src={imageUrl}
-        width={200}
-        height={150}
-        className="rounded-md w-full"
+        width={500}
+        height={500}
+        quality={90} // Increase image quality
+        className="m-auto"
         alt={name}
       />
       <h3 className="text-2xl font-semibold mb-2 text-center">{name}</h3>

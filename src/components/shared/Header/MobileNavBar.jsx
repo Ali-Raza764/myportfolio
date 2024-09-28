@@ -4,13 +4,18 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import { navItems } from "./navLinks";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 const MobileNavBar = () => {
   const [active, setActive] = useState(false);
   const pathname = usePathname();
 
   const handleClick = () => {
+    if (active) {
+      disablePageScroll();
+    }
     setActive(!active);
+    enablePageScroll();
   };
 
   return (

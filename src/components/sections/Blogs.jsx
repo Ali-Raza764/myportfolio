@@ -1,5 +1,5 @@
+import Link from "next/link";
 import BentoGridDemo from "./ItemsGrid";
-
 import { fetchData } from "@/lib/fetchData";
 
 const Blogs = async () => {
@@ -14,12 +14,19 @@ const Blogs = async () => {
         <h2 className="text-4xl font-sans font-semibold w-full text-center">
           Blogs
         </h2>
+
         <p className="w-full text-center font-sans text-gray-400 mt-2">
-          Check Out My blogs Where I experiment with new technologies and create new
-          projects
+          Check Out My blogs Where I experiment with new technologies and create
+          new projects
         </p>
       </div>
       <BentoGridDemo blogs={blogs} />
+      <Link
+        href="/blogs"
+        className="md:mb-6 border border-gray-400 rounded-md p-2 hover:border-black transition"
+      >
+        All Blogs
+      </Link>
     </section>
   );
 };

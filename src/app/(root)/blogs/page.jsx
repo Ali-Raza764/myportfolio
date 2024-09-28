@@ -3,7 +3,6 @@ import { fetchData } from "@/lib/fetchData";
 
 const AllBlogsPage = async () => {
   const blogs = await fetchData("blog");
-  console.log(blogs);
 
   return (
     <main className="min-h-screen flex items-center p-6 w-full flex-col">
