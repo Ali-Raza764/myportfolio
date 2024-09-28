@@ -1,6 +1,6 @@
 # My Portfolio Website 🌐
 
-![Portfolio Screenshot](portfolio.png)
+![Portfolio Screenshot](/public.images/portfolio.webp)
 
 Welcome to my personal portfolio website, a showcase of my skills, projects, and contact information. This website is designed with a sleek, dark theme and a modern user interface to create an immersive experience for visitors.
 
@@ -51,4 +51,4 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 ---
 
-Built with ❤️ by [Ali Raza Khalid](your-portfolio-url).
+Built with ❤️ by [Ali Raza Khalid](https://myportfolio-mu-coral.vercel.app/).
