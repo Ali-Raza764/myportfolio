@@ -1,6 +1,6 @@
 # My Portfolio Website 🌐
 
-![Portfolio Screenshot](/public.images/portfolio.webp)
+![Portfolio Screenshot](/public/images/portfolio.webp)
 
 Welcome to my personal portfolio website, a showcase of my skills, projects, and contact information. This website is designed with a sleek, dark theme and a modern user interface to create an immersive experience for visitors.
 
@@ -27,7 +27,7 @@ Welcome to my personal portfolio website, a showcase of my skills, projects, and
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/your-portfolio-repo.git
+    git clone https://github.com/Ali-Raza764/myportfolio
     ```
 
 2. **Install dependencies**:
