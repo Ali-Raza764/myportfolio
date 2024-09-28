@@ -1,12 +1,11 @@
-"use client"; // Make sure this is at the top
-
+"use client";
 import React from "react";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { FloatingNav } from "./NavBar"; // Import the FloatingNav component
+import { FloatingNav } from "./NavBar";
 import Link from "next/link";
 import MobileNavBar from "./MobileNavBar";
 import { navItems } from "./navLinks";
-
+import { BiLogoGithub } from "react-icons/bi";
+import { GIT_URL } from "@/lib/constants";
 
 const Header = () => {
   return (
@@ -17,9 +16,8 @@ const Header = () => {
           𝒜𝓁𝒾𝓇𝒶𝓏𝒶 𝒦𝒽𝒶𝓁𝒾𝒹
         </div>
 
-        <FloatingNav navItems={navItems} className={"p-3"}/>
+        <FloatingNav navItems={navItems} className={"p-3"} />
 
-        {/* Navbar with rounded border */}
         <nav className="hidden md:flex space-x-8 p-2 rounded-full border border-neutral-300 dark:border-white/20 shadow-lg px-4">
           {navItems.map((item) => (
             <Link
@@ -32,10 +30,13 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Dark/Light mode switch icons */}
         <div className="flex space-x-2">
-          {/* <MdDarkMode className="cursor-pointer text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:scale-110 duration-300" size={35} /> */}
-          <MdLightMode className="cursor-pointer text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:scale-110 duration-300" size={35}/>
+          <a href={GIT_URL} target="_blank">
+            <BiLogoGithub
+              className="cursor-pointer text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:scale-110 duration-300"
+              size={35}
+            />
+          </a>
         </div>
       </div>
     </header>

@@ -9,6 +9,7 @@ export const skillType = defineType({
       name: "title",
       type: "string",
       title: "Skill Title",
+      validation: (Rule) => Rule.required(),
     }),
   ],
   preview: {

@@ -24,9 +24,8 @@ const Projects = async () => {
             <ProjectItem
               key={project._id}
               imageUrl={
-                urlFor(projects[projects.length - 1].mainImage.asset._ref)
-                  .quality(100)
-                  .toString(0) || "https://dummyimage.com/200X200"
+                urlFor(project.mainImage.asset._ref).url() ||
+                "https://dummyimage.com/200X150"
               }
               name={project.title}
               repoUrl={project.repoUrl}
@@ -56,7 +55,7 @@ const ProjectItem = ({
       <Image
         src={imageUrl}
         width={200}
-        height={200}
+        height={150}
         className="rounded-md w-full"
         alt={name}
       />

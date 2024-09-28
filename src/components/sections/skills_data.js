@@ -103,5 +103,5 @@ export const techIcons = {
   Firebase: <BiLogoFirebase size={35} />,
   MongoDB: <BiLogoMongodb size={35} />,
   GoogleCloud: <BiLogoGoogleCloud size={35} />,
-  Redis: <DiRedis />,
+  Redis: <DiRedis size={35} />,
 };

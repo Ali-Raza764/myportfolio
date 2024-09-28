@@ -10,6 +10,7 @@ export const projectType = defineType({
     defineField({
       name: "title",
       type: "string",
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "slug",
@@ -17,11 +18,13 @@ export const projectType = defineType({
       options: {
         source: "title",
       },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "author",
       type: "reference",
       to: { type: "author" },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "mainImage",
@@ -36,22 +39,27 @@ export const projectType = defineType({
           title: "Alternative text",
         },
       ],
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "liveUrl",
       type: "string",
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "repoLink",
       type: "string",
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "technologiesUsed",
       type: "string",
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "description",
       type: "blockContent",
+      validation: (Rule) => Rule.required(),
     }),
   ],
   preview: {

@@ -6,7 +6,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import Blogs from "@/components/sections/Blogs";
 import Contact from "@/components/sections/Contact";
 
-export const revalidate = 60
+export const revalidate = 60;
 
 const Home = () => {
   return (
@@ -19,8 +19,8 @@ const Home = () => {
       <SectionSeparator />
       <Blogs />
       <SectionSeparator />
-      <Testimonials />
-      <SectionSeparator />
+      {/* <Testimonials />
+      <SectionSeparator /> */}
       <Contact />
       <SectionSeparator />
     </main>

@@ -18,11 +18,12 @@ function BentoGridDemo({ blogs }) {
             description={blog.excerpt}
             header={
               <Image
-                src={urlFor(blog.mainImage.asset._ref).toString()}
+                src={urlFor(blog.mainImage.asset._ref).url()}
                 alt={blog.title}
-                width={200}
-                height={200}
-                className="w-full m-auto"
+                width={500}
+                height={500}
+                quality={90}  // Increase image quality
+                className="m-auto"
               />
             }
             className={i === 3 || i === 6 ? "md:col-span-2" : ""}

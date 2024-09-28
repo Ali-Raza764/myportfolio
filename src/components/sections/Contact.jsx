@@ -1,4 +1,17 @@
-import { FaGithub, FaEnvelope, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  EMAIL_URL,
+  GIT_URL,
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+  TWITTER_URL,
+} from "@/lib/constants";
+import {
+  FaGithub,
+  FaEnvelope,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -64,14 +77,14 @@ const Contact = () => {
           </h3>
           <div className="flex flex-col gap-4">
             <a
-              href="mailto:alikillerno@gmail.com"
+              href={EMAIL_URL}
               className="flex items-center gap-2 text-white hover:text-gray-400 transition duration-300"
             >
               <FaEnvelope className="text-2xl" />
               <span>Email</span>
             </a>
             <a
-              href="https://github.com/Ali-Raza764"
+              href={GIT_URL}
               target="_blank"
               className="flex items-center gap-2 text-white hover:text-gray-400 transition duration-300"
             >
@@ -79,7 +92,7 @@ const Contact = () => {
               <span>GitHub</span>
             </a>
             <a
-              href="https://instagram.com/razamindset"
+              href={INSTAGRAM_URL}
               target="_blank"
               className="flex items-center gap-2 text-white hover:text-gray-400 transition duration-300"
             >
@@ -87,12 +100,20 @@ const Contact = () => {
               <span>Instagram</span>
             </a>
             <a
-              href="https://twitter.com/razamindset"
+              href={TWITTER_URL}
               target="_blank"
               className="flex items-center gap-2 text-white hover:text-gray-400 transition duration-300"
             >
               <FaTwitter className="text-2xl" />
               <span>X (Twitter)</span>
+            </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              className="flex items-center gap-2 text-white hover:text-gray-400 transition duration-300"
+            >
+              <FaLinkedin className="text-2xl" />
+              <span>Linkden</span>
             </a>
           </div>
         </div>
